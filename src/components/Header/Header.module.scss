@@ -1,0 +1,31 @@
+.header {
+  background-color: var(--color-purple-900);
+
+  nav {
+    padding-block: 1.125rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .title {
+      color: var(--color-white-0);
+      font-size: 1.25rem;
+
+      .highlight {
+        color: var(--color-cyan-500);
+        font-weight: 700;
+      }
+    }
+
+    .links {
+      margin-left: auto;
+
+      .item {
+        .link {
+          color: var(--color-white-0);
+          transition: 0.3s;
+        }
+      }
+    }
+  }
+}

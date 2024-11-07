@@ -1,4 +1,4 @@
-import type { GatsbyConfig } from "gatsby";
+import type { GatsbyConfig } from 'gatsby';
 
 const config: GatsbyConfig = {
   siteMetadata: {
@@ -9,21 +9,46 @@ const config: GatsbyConfig = {
   // If you use VSCode you can also use the GraphQL plugin
   // Learn more at: https://gatsby.dev/graphql-typegen
   graphqlTypegen: true,
-  plugins: ["gatsby-plugin-sass", "gatsby-plugin-image", "gatsby-plugin-mdx", "gatsby-plugin-sharp", "gatsby-transformer-sharp", {
+  plugins: ['gatsby-plugin-sass', 'gatsby-plugin-image', 'gatsby-plugin-mdx', 'gatsby-plugin-sharp', 'gatsby-transformer-sharp', {
     resolve: 'gatsby-source-filesystem',
     options: {
-      "name": "images",
-      "path": "./src/images/"
+      'name': 'images',
+      'path': './src/images/'
     },
-    __key: "images"
+    __key: 'images'
   }, {
     resolve: 'gatsby-source-filesystem',
     options: {
-      "name": "pages",
-      "path": "./src/pages/"
+      'name': 'pages',
+      'path': './src/pages/'
     },
-    __key: "pages"
-  }]
+    __key: 'pages'
+  }, {
+    resolve: `gatsby-plugin-alias-imports`,
+    options: {
+      alias: {
+        "@src": "src",
+        "@components": "src/components",
+        "@layouts": "src/layouts",
+        "@pages": "src/pages",
+        "@styles": "src/styles",
+        "@templates": "src/templates",
+      },
+      extensions: ['js', 'css', 'scss', 'sass', 'less', 'png', 'jpg', 'jpeg', 'gif', 'svg', 'json']
+    }
+  }, {
+    resolve: `gatsby-omni-font-loader`,
+    options: {
+      enableListener: true,
+      preconnect: [`https://fonts.googleapis.com`, `https://fonts.gstatic.com`],
+      web: [
+        {
+          name: `Open Sans`,
+          file: `https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap`,
+        },
+      ],
+    },
+  },]
 };
 
 export default config;
