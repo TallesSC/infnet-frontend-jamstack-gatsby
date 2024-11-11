@@ -12,18 +12,26 @@
       font-size: 1.25rem;
 
       .highlight {
-        color: var(--color-cyan-500);
+        color: var(--color-cyan-400);
         font-weight: 700;
       }
     }
 
     .links {
       margin-left: auto;
+      display: flex;
+      gap: 1.5rem;
 
       .item {
         .link {
           color: var(--color-white-0);
           transition: 0.3s;
+
+          @media (hover: hover) {
+            &:hover {
+              opacity: .7;
+            }
+          }
         }
       }
     }

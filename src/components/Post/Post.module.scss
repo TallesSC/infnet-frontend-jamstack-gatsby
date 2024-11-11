@@ -1,0 +1,47 @@
+.section {
+  padding-block: 2rem;
+
+
+  .header {
+    position: relative;
+
+    .image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      object-position: center;
+      filter: brightness(0.25);
+      border-radius: 8px;
+    }
+
+    .title {
+      font-weight: 700;
+      position: absolute;
+      text-align: center;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      z-index: 5;
+      font-size: 2.125rem;
+      text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+    }
+  }
+
+  .date {
+    font-size: .75rem;
+    color: var(--color-gray-500);
+    padding-top: .25rem;
+    margin-left: auto;
+  }
+
+  .subtitle {
+    font-size: 1.25rem;
+    padding-top: 1rem;
+    font-weight: 600;
+  }
+
+  .excerpt {
+    padding-top: 3rem;
+    color: var(--color-gray-300);
+  }
+}

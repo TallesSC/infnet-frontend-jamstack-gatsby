@@ -1,0 +1,17 @@
+---
+title: "How To Create Software Diagrams With ChatGPT and Claude"
+subtitle: "An introduction to LLM diagramming — creating software architecture diagrams using multimodal AI and iterating by pasting screenshots."
+date: "2024-10-31"
+slug: "how-to-create-software-diagrams-with-chatgpt-and-claude"
+hero_image: "./how-to-create-software-diagrams-with-chatgpt-and-claude.jpg"
+hero_image_alt: "Near plans to build world’s largest 1.4T parameter open-source AI model"
+hero_image_credit_link: "https://thenewstack.io/how-to-create-software-diagrams-with-chatgpt-and-claude/?utm_source=tldrai"
+---
+
+For the first iteration, I referred Claude to the extension’s JavaScript code and asked it to diagram the architecture. That yielded a useful but slightly broken ASCII diagram.
+
+The major difference between the V2 and V3 versions, by the way, was that in V3, the DOM parsing — which in V2 had been happening in the background script — moved to the content script. That’s because the background script was now a service worker (as mandated by V3) that lacked access to the DOM-parsing API.
+
+What else mandated by V3 had been incorporated into the new version of the extension? I asked, and Claude gave me the rundown: the split between permissions and host_permissions, and promise-based messaging. This was a delightful inversion of the pre-LLM process. Before, I’d have read up on Manifest V3, figured out which aspects were relevant to my project, and then worked out how to apply them. Now I had working code with an explanation that I could interrogate in the context of the code.
+
+The entities and data flows in Claude’s diagram were roughly what I had envisioned. I could have fixed the broken ASCII layout with a bit of hand editing, but that felt silly. I’d rather enlist a proper tool for this job, especially one that could round-trip a concise human-writeable syntax.
